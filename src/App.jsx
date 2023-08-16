@@ -23,8 +23,30 @@ function LoadCountries(){
 
   return(
     <div>
-      <h1>{countries.length}</h1>
+      <h1>Country API Practice</h1>
+      <div className="country-wrap">
+      
+      {
+        countries.map(country => <><Country name={country.name.common} flag={country.flags.png} capital={country.capital} area={country.area} population={country.population}></Country></>)
+      }
+        </div>
     </div>
+  )
+}
+
+function Country(Props){
+  return(
+    
+      <div className='country'>
+      <h3>Country name: {Props.name}</h3>
+      <img style={{width:"150px"}} src={Props.flag} alt="" />
+      <p>Capital: {Props.capital}</p>
+      <p>Area: {Props.area}</p>
+      <p>Population: {Props.population}</p>
+      
+    </div>
+  
+    
   )
 }
 

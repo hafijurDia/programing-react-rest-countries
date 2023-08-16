@@ -40,3 +40,13 @@
 .read-the-docs {
   color: #888;
 }
+.country-wrap{
+  display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto auto auto;
+}
+.country{
+  border: 1px solid red;
+  border-radius: 5px;
+  
+}
